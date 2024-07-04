@@ -5,7 +5,6 @@
 // 
 // Copyright © 2024 Steven Barnett. All rights reserved.
 //
-        
 
 import SwiftUI
 

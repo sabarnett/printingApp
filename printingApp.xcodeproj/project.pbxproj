@@ -11,6 +11,11 @@
 		E82147792C371FF800A0135D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82147782C371FF800A0135D /* ContentView.swift */; };
 		E821477B2C371FF900A0135D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E821477A2C371FF900A0135D /* Assets.xcassets */; };
 		E821477E2C371FF900A0135D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E821477D2C371FF900A0135D /* Preview Assets.xcassets */; };
+		E82147862C37203700A0135D /* HTMLPrintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82147852C37203700A0135D /* HTMLPrintView.swift */; };
+		E82147882C37207300A0135D /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82147872C37207300A0135D /* Bundle+Extensions.swift */; };
+		E821478A2C37218800A0135D /* HostingWindowFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82147892C37218800A0135D /* HostingWindowFinder.swift */; };
+		E821478C2C3722BA00A0135D /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E821478B2C3722BA00A0135D /* ContentViewModel.swift */; };
+		E821478F2C3723C400A0135D /* MarkdownKit in Frameworks */ = {isa = PBXBuildFile; productRef = E821478E2C3723C400A0135D /* MarkdownKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,10 @@
 		E821477A2C371FF900A0135D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E821477D2C371FF900A0135D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E821477F2C371FF900A0135D /* printingApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = printingApp.entitlements; sourceTree = "<group>"; };
+		E82147852C37203700A0135D /* HTMLPrintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTMLPrintView.swift; sourceTree = "<group>"; };
+		E82147872C37207300A0135D /* Bundle+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
+		E82147892C37218800A0135D /* HostingWindowFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingWindowFinder.swift; sourceTree = "<group>"; };
+		E821478B2C3722BA00A0135D /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E821478F2C3723C400A0135D /* MarkdownKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +64,10 @@
 			children = (
 				E82147762C371FF800A0135D /* printingAppApp.swift */,
 				E82147782C371FF800A0135D /* ContentView.swift */,
+				E821478B2C3722BA00A0135D /* ContentViewModel.swift */,
+				E82147852C37203700A0135D /* HTMLPrintView.swift */,
+				E82147872C37207300A0135D /* Bundle+Extensions.swift */,
+				E82147892C37218800A0135D /* HostingWindowFinder.swift */,
 				E821477A2C371FF900A0135D /* Assets.xcassets */,
 				E821477F2C371FF900A0135D /* printingApp.entitlements */,
 				E821477C2C371FF900A0135D /* Preview Content */,
@@ -85,6 +99,9 @@
 			dependencies = (
 			);
 			name = printingApp;
+			packageProductDependencies = (
+				E821478E2C3723C400A0135D /* MarkdownKit */,
+			);
 			productName = printingApp;
 			productReference = E82147732C371FF800A0135D /* printingApp.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +130,9 @@
 				Base,
 			);
 			mainGroup = E821476A2C371FF800A0135D;
+			packageReferences = (
+				E821478D2C3723C400A0135D /* XCRemoteSwiftPackageReference "swift-markdownkit" */,
+			);
 			productRefGroup = E82147742C371FF800A0135D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +161,10 @@
 			files = (
 				E82147792C371FF800A0135D /* ContentView.swift in Sources */,
 				E82147772C371FF800A0135D /* printingAppApp.swift in Sources */,
+				E821478C2C3722BA00A0135D /* ContentViewModel.swift in Sources */,
+				E82147862C37203700A0135D /* HTMLPrintView.swift in Sources */,
+				E82147882C37207300A0135D /* Bundle+Extensions.swift in Sources */,
+				E821478A2C37218800A0135D /* HostingWindowFinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +365,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E821478D2C3723C400A0135D /* XCRemoteSwiftPackageReference "swift-markdownkit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/objecthub/swift-markdownkit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.1.8;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E821478E2C3723C400A0135D /* MarkdownKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E821478D2C3723C400A0135D /* XCRemoteSwiftPackageReference "swift-markdownkit" */;
+			productName = MarkdownKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E821476B2C371FF800A0135D /* Project object */;
 }
